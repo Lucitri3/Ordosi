@@ -52,7 +52,7 @@ export default function AddressDetails({ id }: { id: string }) {
 
       <InfoCard title="Recent History" icon={<History className="text-primary" />}>
         <ul className="space-y-2 font-mono text-sm">
-          {data.signatures.map((sig) => (
+          {data.signatures.map((sig: string) => (
             <li key={sig} className="p-3 bg-background rounded-md truncate hover:bg-border transition-colors">
               <a href={`/tx/${sig}`} className="text-text-secondary hover:text-primary">{sig}</a>
             </li>

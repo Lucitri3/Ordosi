@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 body {
-  background-color: #0D1117; /* Use the direct color value */
-  @apply text-text-primary;
+  background-color: #0D1117;
+  color: #c9d1d9;
 }
 
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary;
 }
-
