@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const nextConfig = {
+module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -8,13 +8,13 @@ const nextConfig = {
   theme: {
     extend: {
       colors: {
-        'background': '#0D1117', // Deep dark blue, almost black
-        'surface': '#161B22',    // The color of cards and surfaces
-        'primary': '#8A53FF',    // A slightly softer Solana Purple
-        'secondary': '#00FFA3', // Solana Green
-        'border': '#30363d',     // A subtle border color
-        'text-primary': '#c9d1d9', // Light gray for primary text
-        'text-secondary': '#8b949e', // Darker gray for secondary text
+        'background': '#0D1117',
+        'surface': '#161B22',
+        'primary': '#8A53FF',
+        'secondary': '#00FFA3',
+        'border': '#30363d',
+        'text-primary': '#c9d1d9',
+        'text-secondary': '#8b949e',
       },
       animation: {
         'fade-in': 'fade-in 0.5s ease-out forwards',
@@ -29,6 +29,4 @@ const nextConfig = {
   },
   plugins: [],
 };
-
-module.exports = nextConfig;
 
