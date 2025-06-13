@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: theme('colors.background');
+  background-color: #0D1117; /* Use the direct color value */
   @apply text-text-primary;
 }
 
