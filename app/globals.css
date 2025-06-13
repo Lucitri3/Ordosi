@@ -4,10 +4,9 @@
 
 body {
   background-color: theme('colors.background');
-  color: theme('colors.text-primary');
+  @apply text-text-primary;
 }
 
-/* A new utility class we can use for a subtle text gradient */
 .text-gradient {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary;
 }
