@@ -1,11 +1,11 @@
 import { Connection, PublicKey, LAMPORTS_PER_SOL } from '@solana/web3.js';
 
-// By defining a 'Props' type, we make the expected shape very clear to TypeScript.
+// The Props type definition remains the same. It is correct.
 type Props = {
   params: { id: string };
 };
 
-// This function will fetch data on the server
+// The data fetching function remains the same.
 async function getAddressData(address: string) {
   try {
     const connection = new Connection('https://api.mainnet-beta.solana.com');
@@ -31,9 +31,11 @@ async function getAddressData(address: string) {
   }
 }
 
-// We now use our new 'Props' type here. This is the fix.
-export default async function AddressPage({ params }: Props) {
-  const data = await getAddressData(params.id);
+// *** THIS IS THE FIX ***
+// Instead of `({ params }: Props)`, we now accept the whole `props` object.
+export default async function AddressPage(props: Props) {
+  // We then access `params` from the `props` object inside the function.
+  const data = await getAddressData(props.params.id);
 
   if (data.error) {
     return <div className="text-red-500 text-center p-8 bg-light-bg rounded-lg">{data.error}</div>;
