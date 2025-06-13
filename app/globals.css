@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 body {
-  background-color: theme('colors.dark-bg');
-  @apply text-gray-200;
+  background-color: theme('colors.background');
+  color: theme('colors.text-primary');
+}
+
+/* A new utility class we can use for a subtle text gradient */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-primary;
 }
 
